@@ -48,7 +48,7 @@ class CalculatorViewModelTest {
 		stubResource(1.50, "$1.50")
 		stubResource(11.50, "$11.50")
 
-		val stub = TipCalculation(10.00,tipAmount = 1.50, grandTotal = 11.50)
+		val stub = TipCalculation("",10.00,tipAmount = 1.50, grandTotal = 11.50)
 		Mockito.`when`(mockCalculator.calculateTip(10.00, 15)).thenReturn(stub)
 
 		calculatorViewModel.calculateTip()

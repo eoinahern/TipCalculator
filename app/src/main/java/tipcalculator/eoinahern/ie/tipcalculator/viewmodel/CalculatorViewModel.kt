@@ -16,7 +16,7 @@ class CalculatorViewModel @JvmOverloads constructor(app : Application, val calcu
 
 
 	init {
-		updateAmounts(TipCalculation(0.00, 0, 0.00, 0.00))
+		updateAmounts(TipCalculation(checkAmount = 0.00, tipPct = 0, tipAmount = 0.00, grandTotal =  0.00))
 	}
 
 

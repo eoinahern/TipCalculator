@@ -8,6 +8,6 @@ class RestrauntCalculator {
 		val total =  tipAmount + input
 
 
-		return TipCalculation(input, pct, tipAmount, total)
+		return TipCalculation("", input, pct, tipAmount, total)
 	}
 }

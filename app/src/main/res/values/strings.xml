@@ -7,4 +7,7 @@
 	<string name="tim_label">Tip</string>
 	<string name="bill_amount_label">Cost</string>
 	<string name ="dollar_amount"> $%1$.02f</string>
+	<string name ="action_save">Save</string>
+	<string name ="action_cancel">Cancel</string>
+
 </resources>
