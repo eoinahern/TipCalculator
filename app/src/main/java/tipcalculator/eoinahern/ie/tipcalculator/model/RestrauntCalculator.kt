@@ -1,6 +1,8 @@
 package tipcalculator.eoinahern.ie.tipcalculator.model
 
-class RestrauntCalculator {
+import android.arch.lifecycle.LiveData
+
+class RestrauntCalculator(var tipRepo : TipCalculationRepository = TipCalculationRepository())  {
 
 	fun calculateTip(input : Double, pct : Int) : TipCalculation {
 
@@ -9,5 +11,17 @@ class RestrauntCalculator {
 
 
 		return TipCalculation("", input, pct, tipAmount, total)
+	}
+
+	public fun saveTipCalculation(tip : TipCalculation) {
+		tipRepo.saveTips(tip)
+	}
+
+	fun loadTipCalculationByLoaction( location : String ) : TipCalculation? {
+        return tipRepo.getSavedTip(location)
+	}
+
+	fun loadSavedTipCalculations() : LiveData<List<TipCalculation>> {
+		return tipRepo.loadSavedTipCalculations()
 	}
 }

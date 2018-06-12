@@ -70,4 +70,21 @@ class CalculatorViewModelTest {
 
 		verify(mockCalculator, never()).calculateTip(anyDouble(), anyInt())
 	}
+
+	@Test
+	fun testSomething() {
+
+		val stub = TipCalculation("",10.00,tipAmount = 1.50, grandTotal = 11.50)
+		val locName = "eoin"
+
+		calculatorViewModel.inputCheckAmount = "10.00"
+		calculatorViewModel.inputTipPercent = "15"
+		`when`(mockCalculator.calculateTip(10.00, 15)).thenReturn(stub)
+
+		calculatorViewModel.calculateTip()
+		calculatorViewModel.saveCurrentTip(locName)
+
+		verify(mockCalculator).saveTipCalculation(stub.copy(locName))
+		assertEquals(locName, calculatorViewModel.locationName)
+	}
 }
