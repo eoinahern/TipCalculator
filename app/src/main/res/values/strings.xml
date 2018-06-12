@@ -1,0 +1,10 @@
+<resources>
+	<string name="app_name">tipCalculator</string>
+	<string name="title_activity_main">MainActivity</string>
+	<string name="input_check_amount_hint">check</string>
+	<string name="tip_percent_hint">Tip Percent</string>
+	<string name="grand_total_label">total</string>
+	<string name="tim_label">Tip</string>
+	<string name="bill_amount_label">Cost</string>
+	<string name ="dollar_amount"> $%1$.02f</string>
+</resources>
